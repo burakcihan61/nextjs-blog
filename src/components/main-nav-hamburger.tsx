@@ -11,7 +11,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ")
 }
 
-export function MainNav({ items }: MainNavProps) {
+export function MainNavHamburger({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       {/*<Link href="/" className="flex items-center space-x-2">*/}
@@ -19,7 +19,7 @@ export function MainNav({ items }: MainNavProps) {
       {/*  <span className="inline-block font-bold">{siteConfig.name}</span>*/}
       {/*</Link>*/}
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className="flex flex-col gap-6">
           {items?.map(
             (item, index) =>
               item.href && (
@@ -28,9 +28,9 @@ export function MainNav({ items }: MainNavProps) {
                   href={item.href}
                   className={classNames(
                     item.disabled
-                      ? "bg-gray-100 text-primary"
-                      : "text-primary hover:bg-gray-50 hover:text-gray-900",
-                    "inline-flex items-center rounded-md py-2 px-3 text-sm font-extrabold leading-tight tracking-tighter"
+                      ? "bg-gray-100 text-gray-900"
+                      : "text-gray-900 hover:bg-gray-50 hover:text-gray-900",
+                    "block rounded-md py-2 px-3 text-base font-medium"
                   )}
                   aria-current={item.disabled ? "page" : undefined}
                 >
