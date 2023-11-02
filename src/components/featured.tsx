@@ -10,10 +10,10 @@ const Featured = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h1>
       <div className="mt-[60px] flex items-center gap-[50px]">
-        <div className="flex-1 h-[500px] relative">
+        <div className="relative h-[500px] flex-1">
           <Image src="/p1.jpeg" alt="p1" fill className="object-cover" />
         </div>
-        <div className="flex-1 flex flex-col gap-7">
+        <div className="flex flex-1 flex-col gap-7">
           <h1 className="text-[40px]">Lorem ipsun</h1>
           <p className="text-[20px] font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do

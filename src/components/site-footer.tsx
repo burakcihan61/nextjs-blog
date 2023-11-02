@@ -27,7 +27,7 @@ export default function SiteFooter() {
             <div key={item.name} className="pb-6">
               <Link
                 href={item.href}
-                className="text-sm leading-6 text-primary hover:text-muted-foreground"
+                className="text-primary hover:text-muted-foreground text-sm leading-6"
               >
                 {item.name}
               </Link>

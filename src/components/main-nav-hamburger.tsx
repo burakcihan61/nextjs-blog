@@ -19,7 +19,7 @@ export function MainNavHamburger({ items }: MainNavProps) {
       {/*  <span className="inline-block font-bold">{siteConfig.name}</span>*/}
       {/*</Link>*/}
       {items?.length ? (
-        <nav className="flex gap-6 flex-col">
+        <nav className="flex flex-col gap-6">
           {items?.map(
             (item, index) =>
               item.href && (
