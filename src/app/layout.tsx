@@ -7,6 +7,7 @@ import { fontSans } from "@/lib/fonts"
 import { ReduxProviders } from "@/lib/redux-providers"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
+import SiteFooter from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -35,15 +36,18 @@ export default function RootLayout({
         <head />
         <body
           className={cn(
-            "bg-background min-h-screen font-sans antialiased",
+            "bg-background font-sans antialiased",
             fontSans.variable
           )}
         >
           <ReduxProviders>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <SiteHeader />
-              <div className="relative flex min-h-screen flex-col">
-                {children}
+              <div className="container-layout">
+                <div className="wrapper">
+                  <SiteHeader />
+                  {children}
+                  <SiteFooter />
+                </div>
               </div>
               <Toaster />
             </ThemeProvider>
